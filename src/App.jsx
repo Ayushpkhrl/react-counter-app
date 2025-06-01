@@ -1,15 +1,20 @@
 import { useState } from "react";
+import "./App.css";
 
 const App = () => {
   const [num, setNum] = useState(0);
+  const [Color,setColor] =useState("green")
   
+
   return (
    <>
-    <div> AYUSH count {num}</div>
-    <button onClick={() => setNum(num + 1)}> increae</button>
-    <button onClick={() => setNum(num + 1)}> decrease</button>
-    <button onClick={() =>setNum(0)}> reset</button>
-   
+   <div className="whole" style={{backgroundColor:Color}}>
+   <button onClick={()=>setColor("red")}>RED</button>
+    <button onClick={()=>setColor("blue")}>RED</button>
+
+
+    
+   </div>
    </>
   );
 };
